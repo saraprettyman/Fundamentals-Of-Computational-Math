@@ -1,3 +1,3 @@
-# math4610
-Is this latex? $$\mathbb{N}\in\mathbb{R}$$ 
-This is most definetly latex lol
+# Sara Prettyman's math4610 site
+The repository that you are looking at is dedicated to the course work for Fundamentals of Computational Mathematics (MATH 4610) during Fall 2022. \\
+My programming language of choice is Python for the duration of this course. The IDE I'll be using is Brackets. 
