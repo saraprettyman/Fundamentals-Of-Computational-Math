@@ -1,10 +1,10 @@
-**Routine Name:** Newton 
+**Routine Name:** newton 
 
 **Author:** Sara Prettyman 
 
 **Language:** Python, the IDE I used was PyCharm. 
 
-**Description/Purpose:** 
+**Description/Purpose:** This routine will compute the root, x1, of a polynomial, such that the polynomial f(x1)=0. This routine calculates an approximate root, and runs through multiple iteratiosd of itself in order to achieve that root. 
 
 **Input:**  Tolerable error = 0.000001, f = $x * e^{-x}$, $f_{prime}=e^{-x}-x*e^{-x}$, maximum iterations = 100, x1 = -1 (where x1 is the initial guess.)
 
