@@ -13,7 +13,7 @@
 
 **Usage/Example:**  This routine takes in the 5 input arguments: tolerable error (due to computer error existing, this allows approimate solutions to be found), the maximum iterations (to stop an endless loop of search of a nonexistant solution), our initial guess of x1 (which due to the instability of secant method must be near the root in order to efficiently work), and our guess for x2 (this is the point which is created using the derivative each time the function runs). For instance, when the guess is x1 = -1 and x2= 1, the output is:
 
-**Implementation/Code** 
+**Implementation/Code:** The following is code for secant()
 
 ```
 import numpy as np
