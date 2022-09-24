@@ -1,11 +1,19 @@
-**Routine Name:** \
-**Author:** Sara Prettyman \
-**Language:** Python, the IDE I used was PyCharm. \
-**Description/Purpose:** \
-**Input:**  Tolerable error = 0.000001, f = $x * e^{-x}$, $f_{prime}=e^{-x}-x*e^{-x}$, maximum iterations = 100, x1 = -1 (where x1 is the initial guess.)\
-**Output:** The output is an approximate solutions for the root of the function f.\
-**Usage/Example:**  \
-**Implementation/Code** \
+**Routine Name:** hybrid_bs
+
+**Author:** Sara Prettyman 
+
+**Language:** Python, the IDE I used was PyCharm. 
+
+**Description/Purpose:** This routine will compute the root, x1, of a polynomial, such that the polynomial f(x1)=0. This routine calculates an approximate root, and runs through multiple iteratiosd of itself in order to achieve that root. 
+
+**Input:**  Tolerable error = 0.0000001, f =$10.14 * e^{x^2} * cos(\frac{\pi}{x})$, maximum iterations = 100, a (this is initial lower bound guess of the interval), b (this is the initial upper bound guess of the interval)
+
+**Output:**  The output is an approximate solution/guess for the root of the function f, which is denoted as x1. If no root is found in proximity, the function will let the user know the routine has run its maximum number of iterations.
+
+**Usage/Example:**   This routine takes in the 4 input arguments: tolerable error (due to computer error existing, this allows approimate solutions to be found), function f, the maximum iterations (to stop an endless loop of search of a nonexistant solution), a (this is initial lower bound guess of the interval), b (this is the initial upper bound guess of the interval). The routine uses the function test_if_negative to see if there is a root in the interval, and if so perfroms secant methods to find an approximation of the root. After root is found or determined not to be there, the next interval is tested by adding 0.001 to a and b, and testing the new interval. For instance, when the guess is x1 = -1 and x2= 1, the output is:
+
+**Implementation/Code:** The following is the code for hybrid_bs()
+
 ```
 """Task 5. Bisection/Secant Method for Root Finding."""
 import numpy as np
@@ -48,7 +56,7 @@ def sub_intervals():
         int_guess = int_guess + 0.001
     return x0_list
 
-def hybrid(f, a, b, tol):
+def hybrid_bs(f, a, b, tol):
     init_index = 0
     solutions = []
     while init_index + 1 < len(x0_list):
@@ -72,5 +80,5 @@ f = lambda x: 10.14 * np.exp(x ** 2) * np.cos(np.pi / x)
 x0_list = sub_intervals()
 
 # main code
-hybrid(f, x0_list[0], x0_list[1], 0.0000001)
+hybrid_bs(f, x0_list[0], x0_list[1], 0.0000001)
 ```
