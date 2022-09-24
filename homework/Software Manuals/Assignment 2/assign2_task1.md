@@ -12,7 +12,7 @@
 
 **Usage/Example:** This routine takes in the 5 input arguments: tolerable error (due to computer error existing, this allows approimate solutions to be found), the maximum iterations (to stop an endless loop of search of a nonexistant solution), and our initial guess of x1 (which due to the instability of newtons method must be near the root in order to efficiently work). For instance, when the guess is x1 = -1, the output is:
 
-```The root of the function using newton method is:  -9.389621148813321e-14```
+    ```The root of the function using newton method is:  -9.389621148813321e-14```
     
 **Implementation/Code**
 
