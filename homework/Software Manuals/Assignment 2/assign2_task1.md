@@ -4,7 +4,7 @@
 
 **Language:** Python, the IDE I used was PyCharm. 
 
-**Description/Purpose:** This routine will compute the root, x1, of a polynomial, such that the polynomial f(x1)=0. This routine calculates an approximate root, and runs through multiple iteratiosd of itself in order to achieve that root. The initial root, however, is guessed by the user and due to the instability of this root finding approach may not produce the answer based on the initial x1 guess. 
+**Description/Purpose:** This routine will compute the root, x1, of a polynomial, such that the polynomial f(x1)=0. This routine calculates an approximate root, and runs through multiple iterations of itself in order to achieve that root. The initial root, however, is guessed by the user and due to the instability of this root finding approach may not produce the answer based on the initial x1 guess. 
 
 **Input:**  The following inputs were made by the user before the code is run: tolerable error = 0.000001, f = $x * e^{-x}$, $f_{prime}=e^{-x}-x*e^{-x}$, maximum iterations = 100, x1 = -1 (where x1 is the initial guess.)
 
