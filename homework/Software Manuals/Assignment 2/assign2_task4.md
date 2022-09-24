@@ -10,7 +10,7 @@
 
 **Output:** The output is an approximate solution/guess for the root of the function f, which is denoted as x1. If no root is found in proximity, the function will let the user know the routine has run its maximum number of iterations.
 
-**Usage/Example:**   This routine takes in the 5 input arguments: tolerable error (due to computer error existing, this allows approimate solutions to be found), the maximum iterations (to stop an endless loop of search of a nonexistant solution), a (this is initial lower bound guess of the interval), b (this is the initial upper bound guess of the interval). The routine uses the function test_if_negative to see if there is a root in the interval, and if so perfroms newtons methods to find an approximation of the root. After root is found or determined not to be there, the next interval is tested by adding 0.001 to a and b, and testing the new interval. For instance, when the guess is x1 = -1 and x2= 1, the output is:
+**Usage/Example:**   This routine takes in the 5 input arguments: tolerable error (due to computer error existing, this allows approimate solutions to be found),f, f prime(the derivative of f), b (this is the initial upper bound guess of the interval). The routine uses the function test_if_negative to see if there is a root in the interval, and if so perfroms newtons methods to find an approximation of the root. After root is found or determined not to be there, the next interval is tested by adding 0.001 to a and b, and testing the new interval. For instance, when the guess is x1 = -1 and x2= 1, the output is:
 
 **Implementation/Code:** The following is the code for hybrid_bn
 
