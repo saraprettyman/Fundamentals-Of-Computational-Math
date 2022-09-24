@@ -38,3 +38,4 @@ f = lambda x: x * np.exp(-x)
 result = secant(-1, 1, f, 0.000001, 100)
 print("The root of the function using secant method is: ", result)
 ```
+**Last Modified:** September/2022
