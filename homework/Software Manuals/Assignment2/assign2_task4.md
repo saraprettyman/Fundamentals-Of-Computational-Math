@@ -1,4 +1,4 @@
-**Routine Name:** 
+**Routine Name:** hybrid_bn
 
 **Author:** Sara Prettyman 
 
@@ -12,7 +12,7 @@
 
 **Usage/Example:**   This routine takes in the 5 input arguments: tolerable error (due to computer error existing, this allows approimate solutions to be found), the maximum iterations (to stop an endless loop of search of a nonexistant solution), a (this is initial lower bound guess of the interval), b (this is the initial upper bound guess of the interval). The routine uses the function test_if_negative to see if there is a root in the interval, and if so perfroms newtons methods to find an approximation of the root. After root is found or determined not to be there, the next interval is tested by adding 0.001 to a and b, and testing the new interval. For instance, when the guess is x1 = -1 and x2= 1, the output is:
 
-**Implementation/Code** 
+**Implementation/Code:** The following is the code for hybrid_bn
 
 ```
 """Task 4. Bisection/Newton Method for Root Finding."""
@@ -54,7 +54,7 @@ def sub_intervals():
     return x0_list
 
 
-def hybrid(f, f_prime, a, b, tol):
+def hybrid_bn(f, f_prime, a, b, tol):
     init_index = 0
     solutions = []
     while init_index + 1 < len(x0_list):
@@ -80,6 +80,6 @@ f_prime = lambda x: 10.14 * (2 * np.exp(x ** 2) * x * np.cos(np.pi / x) + (np.pi
 x0_list = sub_intervals()
 
 # main code
-hybrid(f, f_prime, x0_list[0], x0_list[1], 0.0000001)
+hybrid_bn(f, f_prime, x0_list[0], x0_list[1], 0.0000001)
 
 ```
