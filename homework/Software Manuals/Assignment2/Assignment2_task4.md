@@ -1,11 +1,18 @@
-**Routine Name:** \
-**Author:** Sara Prettyman \
-**Language:** Python, the IDE I used was PyCharm. \
-**Description/Purpose:** \
-**Input:**  Tolerable error = 0.000001, f = $x * e^{-x}$, $f_{prime}=e^{-x}-x*e^{-x}$, maximum iterations = 100, x1 = -1 (where x1 is the initial guess.)\
-**Output:** The output is an approximate solutions for the root of the function f.\
-**Usage/Example:**  \
-**Implementation/Code** \
+**Routine Name:** 
+
+**Author:** Sara Prettyman 
+
+**Language:** Python, the IDE I used was PyCharm. 
+
+**Description/Purpose:** 
+
+**Input:**  Tolerable error = 0.0000001, f =$10.14 * e^{x^2} * cos(\frac{\pi}{x})$, $f_{prime}=10.14(2e^{x^2}*x*cos(\frac{pi}{x})+\frac{(\pi*sin(\frac{pi}{x})}{x^2*e^{x^2}}$, maximum iterations = 100, a (this is initial lower bound guess of the interval), b (this is the initial upper bound guess of the interval)
+
+**Output:** The output is an approximate solution/guess for the root of the function f, which is denoted as x1. If no root is found in proximity, the function will let the user know the routine has run its maximum number of iterations.
+
+**Usage/Example:**   This routine takes in the 5 input arguments: tolerable error (due to computer error existing, this allows approimate solutions to be found), the maximum iterations (to stop an endless loop of search of a nonexistant solution), a (this is initial lower bound guess of the interval), b (this is the initial upper bound guess of the interval). The routine uses the function test_if_negative to see if there is a root in the interval, and if so perfroms newtons methods to find an approximation of the root. After root is found or determined not to be there, the next interval is tested by adding 0.001 to a and b, and testing the new interval. For instance, when the guess is x1 = -1 and x2= 1, the output is:
+
+**Implementation/Code** 
 
 ```
 """Task 4. Bisection/Newton Method for Root Finding."""
