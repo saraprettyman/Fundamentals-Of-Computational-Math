@@ -14,7 +14,7 @@
 
     ```The root of the function using newton method is:  -9.389621148813321e-14```
     
-**Implementation/Code**
+**Implementation/Code:** The following is the code for newton()
 
 ```
 """Task 1. Newton's Method for Root Finding."""
