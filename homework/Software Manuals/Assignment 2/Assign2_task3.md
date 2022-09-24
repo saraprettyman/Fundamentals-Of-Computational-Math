@@ -1,11 +1,28 @@
-**Routine Name:** \
-**Author:** Sara Prettyman \
-**Language:** Python, the IDE I used was PyCharm. \
-**Description/Purpose:** \
-**Input:**  Tolerable error = 0.000001, f = $x * e^{-x}$, $f_{prime}=e^{-x}-x*e^{-x}$, maximum iterations = 100, x1 = -1 (where x1 is the initial guess.)\
-**Output:** The output is an approximate solutions for the root of the function f.\
-**Usage/Example:**  \
-**Implementation/Code** \
+**Routine Name:** verbose
+
+**Author:** Sara Prettyman 
+
+**Language:** Python, the IDE I used was PyCharm. 
+
+**Description/Purpose:** This routine produces a table of the results from the Bisection method, Newton's method, and Secant Method of the fucntion $f(x)=x*e^{-x}$. The table displays the iteration number, approximate location of the root and the absolute value of the error in the approximation. Its purpose is for if the user wishes to the steps each individual function went through in order to reach the solution and/or did not reach a solution. 
+
+**Input:**  There are no inputs needed in this case, besides the added verbose = True command, but the inputs were made by the user before the code is run. The input in the terminal is:
+    
+    ```
+    python assign2_task3.md -v
+    ```
+   which will call the function verbose and run it for all the preceeding methods in the verbose routine. 
+
+**Output:** The output is a 3 column table for each function being run, with it titled "the estimated root of f(x) using" followed by the method name/type. The columns show the number of iterations until the solution was met, or reached its maximum numberr of iterations and did not produce a result. 
+
+**Usage/Example:**  The usage is purely for demonstrative purposes, displaying the results. For instance when newtons method is called it beings with: 
+
+    ```
+    ---------------------------------------------------------------------
+    Estimating root of f(x) using newton's method:
+    iter: | approx root: | abs value of the error in the approximation: 
+    ```
+**Implementation/Code** 
 ```
 """Task 3"""
 import numpy as np
@@ -75,7 +92,7 @@ def bisection(verbose, c_text, x0, f, c, tol=0.00000001, max_iter=15):
 
 
 # Create verbose command, and run all root finding methods with it
-def main():
+def verbose():
     verbose = False
     if len(sys.argv) == 2:
         if sys.argv[1] == "-v":
@@ -91,6 +108,6 @@ def main():
     result_b3 = bisection(verbose, "x*e^(-x)", .5, lambda x: x * np.exp(-x),
                           lambda x: np.exp(x), tol=0.00000001, max_iter=25)
 
-main()
+verbose()
 
 ```
