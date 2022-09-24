@@ -22,7 +22,7 @@
     Estimating root of f(x) using newton's method:
     iter: | approx root: | abs value of the error in the approximation: 
     ```
-**Implementation/Code** 
+**Implementation/Code:** The following is code for verbose() 
 ```
 """Task 3"""
 import numpy as np
