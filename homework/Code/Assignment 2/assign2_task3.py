@@ -66,7 +66,7 @@ def bisection(verbose, c_text, x0, f, c, tol=0.00000001, max_iter=15):
 
 
 # Create verbose command, and run all root finding methods with it
-def main():
+def verbose():
     verbose = False
     if len(sys.argv) == 2:
         if sys.argv[1] == "-v":
@@ -82,4 +82,4 @@ def main():
     result_b3 = bisection(verbose, "x*e^(-x)", .5, lambda x: x * np.exp(-x),
                           lambda x: np.exp(x), tol=0.00000001, max_iter=25)
 
-main()
+verbose()
