@@ -6,13 +6,15 @@
 
 **Description/Purpose:** This routine will compute the root, x1, of a polynomial, such that the polynomial f(x1)=0. This routine calculates an approximate root, and runs through multiple iterations of itself in order to achieve that root. The initial root, however, is guessed by the user and due to the instability of this root finding approach may not produce the answer based on the initial x1 guess. 
 
-**Input:**  The following inputs were made by the user before the code is run: tolerable error = 0.000001, f = $x * e^{-x}$, $f_{prime}=e^{-x}-x*e^{-x}$, maximum iterations = 100, x1 = -1 (where x1 is the initial guess.)
+**Input:**  The following inputs were made by the user before the code is run: tolerable error = 0.000001, f = $x * e^{-x}$, $f_{prime}=e^{-x}-x*e^{-x}$, maximum iterations = 100, x1 = -1 (where x1 is the initial guess.) 
 
-**Output:** The output is an approximate solution/guess for the root of the function f, which is denoted as x1. If no root is found in proximity to the guy, the function will let the user know the routine has run its maximum number of iterations. 
+**Output:** The output is an approximate solution/guess for the root of the function f, which is denoted as x1. If no root is found in proximity to the guess, the routine will let the user know it has run its maximum number of iterations. 
 
 **Usage/Example:** This routine takes in the 5 input arguments: tolerable error (due to computer error existing, this allows approimate solutions to be found), the maximum iterations (to stop an endless loop of search of a nonexistant solution), f, f prime(the derivative of f), and our initial guess of x1 (which due to the instability of newtons method must be near the root in order to efficiently work). For instance, when the guess is x1 = -1, the output is:
 
     ```The root of the function using newton method is:  -9.389621148813321e-14```
+    
+   The root is essentially zero, but due to computer rounding error and the acceptable tolerance, it is displayed a arbitrarily small number. 
     
 **Implementation/Code:** The following is the code for newton()
 
