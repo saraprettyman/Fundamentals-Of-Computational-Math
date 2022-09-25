@@ -39,7 +39,7 @@ def sub_intervals():
         int_guess = int_guess + 0.001
     return x0_list
 
-def hybrid(f, a, b, tol):
+def hybrid_bs(f, a, b, tol):
     init_index = 0
     solutions = []
     while init_index + 1 < len(x0_list):
@@ -63,4 +63,4 @@ f = lambda x: 10.14 * np.exp(x ** 2) * np.cos(np.pi / x)
 x0_list = sub_intervals()
 
 # main code
-hybrid(f, x0_list[0], x0_list[1], 0.0000001)
+hybrid_bs(f, x0_list[0], x0_list[1], 0.0000001)
