@@ -37,7 +37,7 @@ def sub_intervals():
     return x0_list
 
 
-def hybrid(f, f_prime, a, b, tol):
+def hybrid_bn(f, f_prime, a, b, tol):
     init_index = 0
     solutions = []
     while init_index + 1 < len(x0_list):
@@ -63,4 +63,4 @@ f_prime = lambda x: 10.14 * (2 * np.exp(x ** 2) * x * np.cos(np.pi / x) + (np.pi
 x0_list = sub_intervals()
 
 # main code
-hybrid(f, f_prime, x0_list[0], x0_list[1], 0.0000001)
+hybrid_bn(f, f_prime, x0_list[0], x0_list[1], 0.0000001)
