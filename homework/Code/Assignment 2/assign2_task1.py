@@ -20,5 +20,3 @@ f = lambda x: x * np.exp(-x)
 f_prime = lambda x: np.exp(-x) - x * np.exp(-x)
 result = newton(-1, f, f_prime, 0.000001, 100)
 print("The root of the function using newton method is: ", result)
-
-
