@@ -13,7 +13,7 @@
 **Usage/Example:**   This routine takes in the 4 input arguments: tolerable error (due to computer error existing, this allows approimate solutions to be found), function f, the maximum iterations (to stop an endless loop of search of a nonexistant solution), a (this is initial lower bound guess of the interval), b (this is the initial upper bound guess of the interval). The routine uses the function test_if_negative to see if there is a root in the interval, and if so perfroms secant methods to find an approximation of the root. After root is found or determined not to be there, the next interval is tested by adding 0.001 to a and b, and testing the new interval. For instance, when the guess is x1 = -1 and x2= 1, the output is:
 
     ```
-    The solution s are:  [-2.         -0.66666667 -0.4        -0.28571429 -0.22222222 -0.18181818
+    The solutions are:  [-2.         -0.66666667 -0.4        -0.28571429 -0.22222222 -0.18181818
      -0.15384615 -0.13333333 -0.11764706 -0.10526316 -0.0952381  -0.08695652
      -0.08       -0.07407407 -0.06896552 -0.06451613 -0.06060606 -0.05714286
      -0.05405405 -0.05128205 -0.04878049 -0.04651163 -0.04444444 -0.04255319
@@ -89,7 +89,7 @@ def hybrid_bs(f, a, b, tol):
         print("There are no solutions in the interval: ",
               "[", x0_list[0], ",", x0_list[len(x0_list) - 1], "]")
     else:
-        print("The solution s are: ", np.transpose(solutions))
+        print("The solutions are: ", np.transpose(solutions))
     return solutions.sort
 
 
