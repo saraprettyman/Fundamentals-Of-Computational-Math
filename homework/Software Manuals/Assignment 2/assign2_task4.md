@@ -4,13 +4,36 @@
 
 **Language:** Python, the IDE I used was PyCharm. 
 
-**Description/Purpose:** 
+**Description/Purpose:** This routine will compute the root, x1, of a polynomial, such that the polynomial f(x1)=0. This routine calculates an approximate root, and runs through multiple iterations of itself in order to achieve that root. This method is more stable than newtons method alone, and the bisection combination results in a more efficient root finding process. 
 
-**Input:**  Tolerable error = 0.0000001, f =$10.14 * e^{x^2} * cos(\frac{\pi}{x})$, $f_{prime}=10.14(2e^{x^2}*x*cos(\frac{pi}{x})+\frac{(\pi*sin(\frac{pi}{x})}{x^2*e^{x^2}}$, maximum iterations = 100, a (this is initial lower bound guess of the interval), b (this is the initial upper bound guess of the interval)
+**Input:**  Tolerable error = 0.0000001, f =$10.14 * e^{x^2} * cos(\frac{\pi}{x})$, $f_{prime}=10.14(2e^{x^2}*x*cos(\frac{pi}{x})+\frac{(\pi*sin(\frac{pi}{x})}{x^2*e^{x^2}}$, maximum iterations = 100, a (this is initial lower bound guess of the interval), b (this is the initial upper bound guess of the interval).
 
 **Output:** The output is an approximate solution/guess for the root of the function f, which is denoted as x1. If no root is found in proximity, the function will let the user know the routine has run its maximum number of iterations.
 
 **Usage/Example:**   This routine takes in the 5 input arguments: tolerable error (due to computer error existing, this allows approimate solutions to be found),f, f prime(the derivative of f), b (this is the initial upper bound guess of the interval). The routine uses the function test_if_negative to see if there is a root in the interval, and if so perfroms newtons methods to find an approximation of the root. After root is found or determined not to be there, the next interval is tested by adding 0.001 to a and b, and testing the new interval. For instance, when the guess is x1 = -1 and x2= 1, the output is:
+
+    ```The solutions are:  [-2.00000000e+00 -6.66666667e-01 -4.00000000e-01 -2.85714286e-01
+     -2.22222222e-01 -1.81818182e-01 -1.53846154e-01 -1.33333333e-01
+     -1.17647059e-01 -1.05263158e-01 -9.52380952e-02 -8.69565217e-02
+     -8.00000000e-02 -7.40740741e-02 -6.89655172e-02 -6.45161290e-02
+     -6.06060606e-02 -5.71428571e-02 -5.40540541e-02 -5.12820513e-02
+     -4.87804878e-02 -4.65116279e-02 -4.44444444e-02 -4.25531915e-02
+     -4.08163265e-02 -3.92156863e-02 -3.77358491e-02 -3.63636364e-02
+     -3.50877193e-02 -3.38983051e-02 -3.27868852e-02 -3.17460317e-02
+     -3.07692308e-02 -3.27868852e-02 -2.73972603e-02 -2.66666667e-02
+     -2.35294118e-02 -2.15053763e-02 -1.94174757e-02 -1.55038760e-02
+     -1.73913043e-02 -1.65289256e-02 -1.55038760e-02 -1.04712042e-02
+      1.04712042e-02  1.55038760e-02  1.65289256e-02  1.73913043e-02
+     -7.28066957e-04  1.94174757e-02  2.15053763e-02  2.35294118e-02
+      2.66666667e-02  2.73972603e-02  3.27868852e-02  3.07692308e-02
+      3.17460317e-02  3.27868852e-02  3.38983051e-02  3.50877193e-02
+      3.63636364e-02  3.77358491e-02  3.92156863e-02  4.08163265e-02
+      4.25531915e-02  4.44444444e-02  4.65116279e-02  4.87804878e-02
+      5.12820513e-02  5.40540541e-02  5.71428571e-02  6.06060606e-02
+      6.45161290e-02  6.89655172e-02  7.40740741e-02  8.00000000e-02
+      8.69565217e-02  9.52380952e-02  1.05263158e-01  1.17647059e-01
+      1.33333333e-01  1.53846154e-01  1.81818182e-01  2.22222222e-01
+      2.85714286e-01  4.00000000e-01  6.66666667e-01  2.00000000e+00] ```
 
 **Implementation/Code:** The following is the code for hybrid_bn
 
