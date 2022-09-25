@@ -4,24 +4,26 @@
 
 **Language:** Python, the IDE I used was PyCharm. 
 
-**Description/Purpose:** This routine produces a table of the results from the Bisection method, Newton's method, and Secant Method of the fucntion $f(x)=x*e^{-x}$. The table displays the iteration number, approximate location of the root and the absolute value of the error in the approximation. Its purpose is for if the user wishes to the steps each individual function went through in order to reach the solution and/or did not reach a solution. 
+**Description/Purpose:** This routine produces a table of the results from the Bisection method, Newton's method, and Secant Method of the fucntion $f(x)=x*e^{-x}$. The table displays the iteration number, approximate location of the root and the absolute value of the error in the approximation. Its purpose is if the user wishes to the steps each individual function went through in order to reach the solution and/or did not reach a solution. 
 
 **Input:**  There are no inputs needed in this case, besides the added verbose = True command, but the inputs were made by the user before the code is run. The input in the terminal is:
     
     ```
-    python assign2_task3.md -v
+    python assign2_task3.py -v
     ```
    which will call the function verbose and run it for all the preceeding methods in the verbose routine. 
 
 **Output:** The output is a 3 column table for each function being run, with it titled "the estimated root of f(x) using" followed by the method name/type. The columns show the number of iterations until the solution was met, or reached its maximum numberr of iterations and did not produce a result. 
 
-**Usage/Example:**  The usage is purely for demonstrative purposes, displaying the results. For instance when newtons method is called it beings with: 
+**Usage/Example:**  The usage is purely for demonstrative purposes, displaying the results. For instance, when newtons method is called it beings with: 
 
     ```
     ---------------------------------------------------------------------
     Estimating root of f(x) using newton's method:
     iter: | approx root: | abs value of the error in the approximation: 
     ```
+    
+   followed by the respect values for each column.
 **Implementation/Code:** The following is code for verbose() 
 ```
 """Task 3"""
