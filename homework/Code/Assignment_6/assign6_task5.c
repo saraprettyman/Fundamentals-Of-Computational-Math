@@ -199,6 +199,15 @@ int main(){
                     }
                     printf("\n");
                 }
+    printf("The to-become-an-action-matrix matrix, which is a groupm is:\n");
+    for (int i=0; i < 2; i++)
+                {
+                    for(int j=0; j < 2; j++)
+                    {
+                        printf("%.2f    ", actionMatrix1[i][j]);
+                    }
+                    printf("\n");
+                }
     printf("Vector1 is: ");
     printf("< ");
     for (i = 0; i < 3; i++){
@@ -217,6 +226,18 @@ int main(){
     for (i = 0; i < 3; i++){
         printf ("%.2f ", vect3[i]);}
     printf(">\n\n");
+    
+    printf("Vector4 is: ");
+    printf("< ");
+    for (i = 0; i < 3; i++){
+        printf ("%.2f ", vect4[i]);}
+    printf(">\n\n");
+    
+    
+    
+    
+    
+    
 
 
     // Show results of addition vectors
