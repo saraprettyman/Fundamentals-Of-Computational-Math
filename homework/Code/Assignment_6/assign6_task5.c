@@ -10,6 +10,8 @@ double vect3[3] = {1.0, 1.0, 1.0};
 double matrix1[3][3] = {{1.0,2.0,3.0}, {4.0,5.0,6.0}, {7.0,8.0,9.0}};
 double matrix2[3][3] = {{9.0,8.0,7.0}, {6.0,5.0,4.0}, {3.0,2.0,1.0}};
 
+double actionMatrix1[2][2] = {{0.0,1.0},{-1.0, 0.0}}; // This is trignometric function at pi/2
+double vect4[2] = {1.0, -1.0};
 
 // Vector operations
 double * vectAddition(double array1[], double array2[], int size){
@@ -78,6 +80,19 @@ double vectTriProduct(double array1[], double array2[], double array3[]){
 }
 
 // Matrix operations
+double *actionMatrix(double action[2][2], double vect3[]){
+    static double results[2] = {0.0,0.0};
+
+    for (int i = 0; i < 2; i++)
+    {
+        for (int j = 0; j < 2; j++)
+        {
+            results[j] += action[j][i] * vect3[i];
+        }
+    }
+    return results;
+}  
+
 double **sumOfTwoMatrices(double matrix4[][3], double matrix5[][3]){
     double **matrix3;
     matrix3 = malloc(sizeof(double*)*3);
@@ -150,6 +165,7 @@ int main(){
     double **r8;
     double **r9;
     double **r10;
+    double *r11;
 
     // Defining variables
     r1 = vectAddition(vect1, vect2, 3);
@@ -162,6 +178,7 @@ int main(){
     r8 = sumOfTwoMatrices(matrix1, matrix2);
     r9 = diffTwoMatrices(matrix1,matrix2);
     r10 = produceTwoMatrices(matrix1,matrix2);
+    r11 = actionMatrix(actionMatrix1, vect4);
     
     // Show original matrices
     printf("Matrix1 is:\n");
@@ -234,6 +251,13 @@ int main(){
 
     // Show results of the vector tri product
     printf("The vector tri product of vector1 and vector2 and vector3 is: %.3f\n", r7);
+    
+    // Show results of action matrix 
+    printf("\nThe result of action of matrix and vect4 is:\n");
+    printf("< ");
+    for (i = 0; i < 2; i++)
+        printf ("%.2f ", r11[i]);
+    printf(">\n\n");
 
     // Show results of sum of two matrics 
     printf("\nThe sum of matrix one and matrix two is: \n");
