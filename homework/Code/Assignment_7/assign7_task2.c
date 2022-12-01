@@ -10,7 +10,7 @@ int n = 3;
 
 
 // Method
-static double* hadv(int n, double u[n], double v[n]){
+static double* hadamardV(int n, double u[n], double v[n]){
     double* w;
     w = malloc(sizeof(double*)*n);
     for(int i = 0; i < n; i ++){
@@ -23,7 +23,7 @@ static double* hadv(int n, double u[n], double v[n]){
 // Implementation Example
 int main(){
     double* r1;
-    r1 = hadv(n, u, v);
+    r1 = hadamardV(n, u, v);
     printf("The resulting vector is: ");
     printf("< ");
     for (int i = 0; i < 3; i++){
