@@ -6,12 +6,12 @@
 // Initialization of Variables
 double u[3] = {1.0, 2.0, 5.0}; // this is vector of 3 elements
 double v[3] = {2.0, 3.0, 4.0};
-int m = 3;
-int n = 3;
+int m = 3; // Elements in first vector
+int n = 3; // Total number of elements in second vector 
 
 
 // Methods
-static double **outv(int m, int n, double a[m], double b[n]){
+static double **outerProduct(int m, int n, double a[m], double b[n]){
     double **c;
     c = malloc(sizeof(double*)*m);
 
@@ -35,7 +35,7 @@ static double **outv(int m, int n, double a[m], double b[n]){
 // Implementation Example
 int main(){
     double** r1;
-    r1 = outv(m, n, u, v);
+    r1 = outerProduct(m, n, u, v);
     for(int i=0; i < m; i++){
         for(int j=0; j < n; j++){
             printf("%.2f    ", r1[i][j]);
