@@ -13,7 +13,7 @@ int n = 3;
 
 
 // Methods 
-static double* hadvomp(int n, double u[n], double v[n]){
+static double* hadamardVomp(int n, double u[n], double v[n]){
     double* w;
     w = malloc(sizeof(double*)*n);
     #pragma omp parallel
@@ -36,7 +36,7 @@ static double* hadvomp(int n, double u[n], double v[n]){
 // Implementation Example
 int main(){
     double* r1;
-    r1 = hadv(n, u, v);
+    r1 = hadamardVomp(n, u, v);
     printf("The resulting vector is: ");
     printf("< ");
     for (int i = 0; i < 3; i++){
