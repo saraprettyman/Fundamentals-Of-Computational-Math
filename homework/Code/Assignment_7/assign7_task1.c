@@ -7,7 +7,7 @@
 #define NUM_THREADS 4
 
 
-// Initalization of variables
+// Initalization of example variables
 double a[3][3] = {{2.0,2.0,2.0},{3.0,3.0,3.0},{4.0,4.0,4.0}};
 double b[3][2] = {{1.0,1.0},{2.0,2.0},{3.0,3.0}};
 int m = 3; // m is the both matrices row totals
@@ -15,15 +15,12 @@ int n = 3; // n is the first matrix columns
 int p = 2; // p is the second matrix columns
 
 // Methods 
-static double dot(int n, double a[n], double b[n]){
+static double dotProduct(int n, double a[n], double b[n]){
     double c;
     c = 0;
     for (int i=0; i < n; i++){
         c += a[i] * b[i];
-        //printf("multiplicating %f and %f\n", a[i], b[i]);
     }
-    
-    //printf("result: %f\n", c);
     return c;
 }
 
@@ -48,7 +45,7 @@ static double** prodmOMP(int m, int n, int p, double a[m][n], double b[n][p]){
         for (int j = id; j < p; j+=count) {
             double tempb[n];
             for(int t = 0; t < n; t++){tempb[t] = b[t][j]; }
-                c[i][j] = dot(n, a[i], tempb);
+                c[i][j] = dotProduct(n, a[i], tempb);
 
             }
 
