@@ -17,7 +17,7 @@ The root is essentially zero, but due to computer rounding error and the accepta
 
 Implementation/Code: The following is the code for newton()
 
-"""Task 1. Newton's Method for Root Finding."""
+```Task 1. Newton's Method for Root Finding.
 import numpy as np
 
 # Define Newton's Method
@@ -38,5 +38,5 @@ def newton(x1, f, f_prime, tol, max_iter):
 f = lambda x: x * np.exp(-x)
 f_prime = lambda x: np.exp(-x) - x * np.exp(-x)
 result = newton(-1, f, f_prime, 0.000001, 100)
-print("The root of the function using newton method is: ", result)
-Last Modified: September/2022
+print("The root of the function using newton method is: ", result)```
+Last Modified: January/2023
